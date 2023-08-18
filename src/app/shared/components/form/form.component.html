@@ -1,0 +1,43 @@
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="title">Title</label>                    
+                        <input type="text"  #titleVal placeholder="Title" class="form-control" >
+                        <label for="image">Image</label>                    
+                        <input type="text" #imgUrlVal placeholder="Image-url" class="form-control">
+                        <label for="releaseDate">release date</label>                    
+                        <input type="text" #releaseDateVal placeholder="release date" class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="rating">Rating</label>                    
+                        <input type="text" #ratingVal placeholder="Rating 0 - 5" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="movie genres">movie genres</label>                    
+                        <select  placeholder="movie genres" class="form-control" #selectedGenre>
+                            <option value="action">Action</option>
+                            <option value="romantic">Romantic</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="horror">Horror</option>
+                            <option value="science-fiction">Science Fiction</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 text-center d-flex justify-content-between">
+                        <button class="btn bg-primary text-white" (click)="onClick(titleVal,imgUrlVal,releaseDateVal,ratingVal,selectedGenre,'Movie')">
+                            Add Movie
+                        </button>
+                        <button class="btn btn-success" (click)="onClick(titleVal,imgUrlVal,releaseDateVal,ratingVal,selectedGenre , 'Web-Series')">
+                            Add Series
+                        </button>
+                        <button class="btn btn-primary" (click)="onClick(titleVal,imgUrlVal,releaseDateVal,ratingVal,selectedGenre , 'Cartoon')">
+                            Add Cartoon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

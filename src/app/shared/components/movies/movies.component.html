@@ -1,0 +1,29 @@
+<h3 class="bg-primary text-center p-1 text-white">movies</h3>
+
+<div class="card mb-3"
+*ngFor="let obj of dataSend ; let i = index"
+style="border: 1px solid red;">
+    <div class="card-body">
+        <img class="img-fluid" src={{obj.imgUrl}} alt="">
+    </div>
+    <div class="card-footer">
+        <span>
+            <i class="fa-solid fa-star"></i>
+        </span>
+        <span class="rating">
+            {{obj.ratings}}
+        </span>
+
+        <h4 class="mt-2">{{i+1}}. {{obj.title}}</h4>
+
+        <div>
+            realise date :{{obj.releaseDate}}
+        </div>
+        <div>
+            geners : {{obj.selectedGenre}}
+        </div>
+        <div>
+            {{obj.genre}}
+        </div>
+    </div>
+</div>
